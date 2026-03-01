@@ -3,500 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Level | Гульназ Аслямова</title>
-    <!-- Подключаем современные шрифты -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    
+    <title>English Level — Английский без скуки и зубрёжки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            /* Яркая фиолетово-розовая палитра */
-            --primary: #FF00CC;       /* Неоновая фуксия */
-            --secondary: #9D00FF;     /* Электрик фиолетовый */
-            --accent: #00E5FF;        /* Яркий голубой для контраста */
-            --dark: #2a0033;          /* Темно-фиолетовый фон */
-            --light: #fff0f5;         /* Светло-розовый фон */
-            --gradient: linear-gradient(135deg, #FF00CC 0%, #9D00FF 100%);
-            --text-gradient: linear-gradient(45deg, #FF00CC, #9D00FF, #FF0066);
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
         body {
-            font-family: 'Nunito', sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-            overflow-x: hidden;
+            background: linear-gradient(135deg, #7b2ff7, #f107a3, #c471f5, #ff4ecd);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+            color: #ffffff;
         }
 
-        h1, h2, h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
-        a { text-decoration: none; }
-
-        /* --- Header --- */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 5%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 10px 30px rgba(157, 0, 255, 0.15);
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            background: var(--gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-weight: 900;
-            text-transform: uppercase;
-        }
-
-        .btn-nav {
-            padding: 0.8rem 2rem;
-            background: var(--dark);
-            color: white;
-            border-radius: 50px;
-            font-weight: 700;
-            transition: 0.3s;
-            box-shadow: 0 5px 15px rgba(42, 0, 51, 0.3);
-        }
-
-        .btn-nav:hover {
-            background: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 0, 204, 0.4);
-        }
-
-        /* --- Hero Section --- */
-        .hero {
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        header {
             text-align: center;
-            padding: 2rem;
-            background: radial-gradient(circle at 50% 50%, rgba(255, 0, 204, 0.05) 0%, rgba(157, 0, 255, 0.05) 100%);
-            position: relative;
-            overflow: hidden;
+            padding: 110px 20px 60px;
         }
 
-        /* Яркие пятна на фоне */
-        .blob {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(80px);
-            z-index: -1;
-            opacity: 0.7;
-            animation: float 6s ease-in-out infinite;
-        }
-        .blob-1 { top: -10%; left: -10%; width: 500px; height: 500px; background: #FF00CC; }
-        .blob-2 { bottom: -10%; right: -10%; width: 400px; height: 400px; background: #9D00FF; }
-
-        @keyframes float {
-            0% { transform: translate(0, 0); }
-            50% { transform: translate(20px, 40px); }
-            100% { transform: translate(0, 0); }
-        }
-
-        .hero-content {
-            max-width: 900px;
-            z-index: 1;
-        }
-
-        .hero h1 {
-            font-size: 4.5rem;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            background: var(--text-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            letter-spacing: -2px;
-        }
-
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 3rem;
-            color: #555;
-            font-weight: 600;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta-button {
-            display: inline-block;
-            padding: 1.2rem 3.5rem;
-            font-size: 1.3rem;
+        header h1 {
+            font-size: 3.4rem;
             font-weight: 800;
-            color: white;
-            background: var(--gradient);
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            box-shadow: 0 15px 35px rgba(157, 0, 255, 0.4);
-            transition: all 0.3s ease;
-            text-transform: uppercase;
+            margin-bottom: 25px;
+            text-shadow: 0 8px 25px rgba(0,0,0,0.3);
         }
 
-        .cta-button:hover {
-            transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 25px 50px rgba(255, 0, 204, 0.6);
+        .subtitle {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
-        /* --- Features --- */
-        .features {
-            padding: 6rem 5%;
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-top: 10px;
         }
 
-        .section-title {
+        .btn {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 16px 45px;
+            background: #ffffff;
+            color: #f107a3;
+            font-weight: 800;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: 0.3s ease;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+        }
+
+        .btn:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+        }
+
+        section {
+            padding: 90px 20px;
             text-align: center;
-            font-size: 3rem;
-            margin-bottom: 4rem;
-            color: var(--dark);
         }
 
-        .grid {
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
+            margin-top: 60px;
         }
 
         .card {
-            background: white;
-            padding: 2.5rem;
+            background: rgba(255, 255, 255, 0.18);
+            padding: 40px;
             border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-            transition: 0.3s;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
+            backdrop-filter: blur(14px);
+            transition: 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-15px);
-            border-color: var(--primary);
-            box-shadow: 0 30px 60px rgba(157, 0, 255, 0.15);
-        }
-
-        .icon {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            display: block;
-            filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
+            transform: translateY(-15px) scale(1.03);
+            background: rgba(255, 255, 255, 0.28);
         }
 
         .card h3 {
-            margin-bottom: 1rem;
-            font-size: 1.6rem;
-            color: var(--secondary);
+            margin-bottom: 18px;
+            font-size: 1.7rem;
         }
 
-        /* --- About --- */
-        .about {
-            padding: 6rem 5%;
-            background: var(--light);
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 5rem;
+        .about p {
+            max-width: 850px;
+            margin: 30px auto 0;
+            line-height: 1.8;
+            font-size: 1.15rem;
         }
 
-        .about-logo {
-            flex: 1;
-            min-width: 300px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .prices {
+            background: rgba(255,255,255,0.15);
+            border-radius: 40px;
+            padding: 70px 20px;
         }
 
-        .about-logo img {
-            max-width: 400px;
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 20px 40px rgba(157, 0, 255, 0.2));
-            transition: 0.3s;
-        }
-
-        .about-logo img:hover {
-            transform: scale(1.05) rotate(3deg);
-        }
-
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .tag {
-            background: var(--accent);
-            color: var(--dark);
-            padding: 0.5rem 1rem;
-            border-radius: 10px;
-            font-weight: 800;
-            font-size: 1rem;
-            margin-bottom: 1.5rem;
-            display: inline-block;
-            text-transform: uppercase;
-        }
-
-        /* --- Pricing --- */
-        .pricing {
-            padding: 6rem 5%;
-            background: white;
-        }
-
-        .price-card {
-            background: white;
-            padding: 3rem;
-            border-radius: 30px;
-            text-align: center;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-            position: relative;
-            transition: 0.3s;
-            border: 3px solid #f0f0f0;
-        }
-        
-        .price-card:hover {
-            transform: scale(1.03);
-            border-color: var(--secondary);
-        }
-
-        .price {
-            font-size: 4rem;
-            font-weight: 900;
-            margin: 1.5rem 0;
-            line-height: 1;
-        }
-        
-        .price.individual-price { color: var(--primary); }
-        .price.group-price { color: var(--secondary); }
-
-        .price span {
-            font-size: 1.2rem;
-            color: #999;
-            font-weight: 400;
-            display: block;
-            margin-top: 5px;
-        }
-
-        .price-features {
-            list-style: none;
-            margin-bottom: 2.5rem;
-            text-align: left;
-            padding: 0 1rem;
-        }
-
-        .price-features li {
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            font-size: 1.1rem;
-        }
-
-        .price-features li::before {
-            content: '★';
-            color: var(--accent);
-            font-size: 1.5rem;
-            margin-right: 15px;
-            text-shadow: 0 0 5px var(--accent);
-        }
-
-        /* --- Footer --- */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 5rem 5%;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Декор внизу */
-        footer::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; height: 5px;
-            background: var(--gradient);
-        }
-
-        .phone-link {
-            font-size: 2.5rem;
-            color: var(--accent);
-            font-weight: 900;
-            display: block;
-            margin: 2rem 0;
-            transition: 0.3s;
-            text-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
-        }
-        
-        .phone-link:hover {
-            color: white;
-            transform: scale(1.05);
-        }
-
-        .socials {
-            margin: 2rem 0;
-        }
-
-        .socials a {
-            display: inline-block;
-            color: white;
-            font-size: 1.2rem;
-            margin: 0 10px;
-            padding: 15px 30px;
-            border: 2px solid rgba(255,255,255,0.2);
-            border-radius: 50px;
+        .price-box {
+            margin-top: 40px;
+            font-size: 1.3rem;
             font-weight: 700;
-            transition: 0.3s;
-            background: rgba(255,255,255,0.05);
         }
 
-        .socials a:hover {
-            background: var(--primary);
-            border-color: var(--primary);
-            box-shadow: 0 0 30px var(--primary);
-            transform: translateY(-5px);
+        .contact {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 80px 20px;
+            border-radius: 40px 40px 0 0;
         }
 
-        /* --- Mobile --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
-            .hero p { font-size: 1.1rem; }
-            .about { flex-direction: column; }
-            .about-logo img { max-width: 300px; }
-            .price { font-size: 3rem; }
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0,0,0,0.6);
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.4rem;
+            }
+            .subtitle {
+                font-size: 1.3rem;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Навигация -->
-    <nav>
-        <div class="logo">English Level</div>
-        <a href="#contact" class="btn-nav">Записаться</a>
-    </nav>
+<header>
+    <h1>Английский без скуки и зубрёжки</h1>
+    <div class="subtitle">Преподаю язык так, как на нем говорят в жизни.</div>
+    <p>English Level — школа английского языка</p>
+    <p>Гульназ Аслямова — репетитор с опытом 20 лет</p>
+    <a href="#contact" class="btn">Записаться на пробный урок</a>
+</header>
 
-    <!-- Главный экран -->
-    <section class="hero">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        
-        <div class="hero-content">
-            <h1>Английский без скуки и зубрёжки</h1>
-            <p>Преподаю язык так, как на нем говорят в жизни. Учимся играючи, без слез и стресса.</p>
-            <a href="#pricing" class="cta-button">Выбрать формат</a>
-        </div>
-    </section>
+<section class="about">
+    <div class="container">
+        <h2>О школе English Level</h2>
+        <p>
+            Меня зовут Гульназ Аслямова. Уже 20 лет я обучаю английскому языку младших школьников. На уроках мы не зубрим правила, а учимся говорить, понимать и использовать язык в реальных жизненных ситуациях. Дети занимаются в яркой, дружелюбной атмосфере и быстро начинают уверенно общаться на английском.
+        </p>
+    </div>
+</section>
 
-    <!-- Преимущества -->
-    <section class="features">
-        <h2 class="section-title">Почему дети выбирают меня?</h2>
-        <div class="grid">
+<section>
+    <div class="container">
+        <h2>Почему выбирают мои занятия</h2>
+        <div class="cards">
             <div class="card">
-                <span class="icon">🚀</span>
-                <h3>Быстрый старт</h3>
-                <p>Начнем говорить простыми фразами уже через 15 минут после знакомства. Никакой сухой теории в начале.</p>
+                <h3>Живой разговорный английский</h3>
+                <p>Учимся говорить так, как говорят носители языка в повседневной жизни.</p>
             </div>
             <div class="card">
-                <span class="icon">🧸</span>
-                <h3>Игровой метод</h3>
-                <p>Никакой скучной зубрежки. Учим слова через песни, игры, карточки и мультфильмы.</p>
+                <h3>Опыт 20 лет</h3>
+                <p>Глубокое понимание детской психологии и эффективные методики обучения.</p>
             </div>
             <div class="card">
-                <span class="icon">👩‍🏫</span>
-                <h3>20 лет опыта</h3>
-                <p>Я знаю, как найти подход к каждому ребенку, даже самому непоседливому.</p>
-            </div>
-            <div class="card">
-                <span class="icon">📚</span>
-                <h3>Школьная программа</h3>
-                <p>Помогаю с домашними заданиями и подтягиваю оценки в школе, расширяя словарный запас.</p>
+                <h3>Формат для младших школьников</h3>
+                <p>Интерактивные задания, игры и современные материалы без скуки.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Обо мне -->
-    <section class="about">
-        <div class="about-logo">
-            <!-- Замените logo.png на путь к вашему файлу с логотипом -->
-            <img src="logo.png" alt="English Level Logo - котик с книгой">
+<section class="prices">
+    <div class="container">
+        <h2>Стоимость занятий</h2>
+        <div class="price-box">
+            <p>Индивидуальный урок — 800 рублей / 60 минут</p>
+            <p>Занятие в группе — 500 рублей</p>
         </div>
-        <div class="about-text">
-            <span class="tag">О РЕПЕТИТОРЕ</span>
-            <h2>Привет, я Гульназ Аслямова!</h2>
-            <p>Основатель школы <strong>English Level</strong>. Моя главная страсть — преподавание английского языка детям младшего школьного возраста.</p>
-            <br>
-            <p>За <strong>20 лет</strong> практики я разработала уникальную методику, которая позволяет детям:</p>
-            <ul style="margin-top: 1rem; margin-left: 1.5rem; font-weight: 700; color: var(--secondary);">
-                <li>Преодолеть языковой барьер</li>
-                <li>Полюбить уроки английского</li>
-                <li>Свободно общаться на простые темы</li>
-            </ul>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Цены -->
-    <section class="pricing" id="pricing">
-        <h2 class="section-title">Стоимость занятий</h2>
-        <div class="grid">
-            <!-- Групповые занятия -->
-            <div class="price-card">
-                <h3>В мини-группе</h3>
-                <div class="price group-price">500₽ <span>/ 60 мин</span></div>
-                <p style="margin-bottom: 1.5rem; color: #666; font-weight: 600;">Идеально для общения и игр</p>
-                <ul class="price-features">
-                    <li>Занятия в мини-группе (3-5 человек)</li>
-                    <li>Командные игры и диалоги</li>
-                    <li>Дружеская атмосфера</li>
-                    <li>Выгодная цена</li>
-                </ul>
-                <a href="#contact" class="btn-nav" style="background: var(--secondary);">Записаться в группу</a>
-            </div>
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Контакты</h2>
+        <p>Телефон: 8 904 450 44 51</p>
+        <p>Школа английского языка English Level</p>
+        <a href="tel:89044504451" class="btn">Позвонить сейчас</a>
+    </div>
+</section>
 
-            <!-- Индивидуальные занятия -->
-            <div class="price-card">
-                <h3>Индивидуально</h3>
-                <div class="price individual-price">800₽ <span>/ 60 мин</span></div>
-                <p style="margin-bottom: 1.5rem; color: #666; font-weight: 600;">Максимум внимания ребенку</p>
-                <ul class="price-features">
-                    <li>Персональная программа</li>
-                    <li>Помощь со школьными ДЗ</li>
-                    <li>Учет темпа ребенка</li>
-                    <li>Гибкий график</li>
-                </ul>
-                <a href="#contact" class="btn-nav" style="background: var(--primary);">Записаться лично</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Футер / Контакты -->
-    <footer id="contact">
-        <h2>Запишитесь на пробный урок!</h2>
-        <p style="margin-top: 1rem; opacity: 0.8; font-size: 1.2rem;">Позвоните или напишите мне, чтобы обсудить детали.</p>
-        
-        <a href="tel:+79044504451" class="phone-link">8 (904) 450-44-51</a>
-
-        <div class="socials">
-            <a href="https://wa.me/79044504451">WhatsApp</a>
-            <a href="https://t.me/+79044504451">Telegram</a>
-        </div>
-
-        <p style="font-size: 0.8rem; margin-top: 3rem; opacity: 0.5;">© 2023 English Level. Гульназ Аслямова.</p>
-    </footer>
+<footer>
+    <p>© 2026 English Level | Гульназ Аслямова</p>
+</footer>
 
 </body>
 </html>
