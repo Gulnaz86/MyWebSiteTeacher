@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Level — Английский без скуки и зубрёжки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #7b2ff7, #f107a3, #c471f5, #ff4ecd);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+            color: #ffffff;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        header {
+            text-align: center;
+            padding: 110px 20px 60px;
+        }
+
+        header h1 {
+            font-size: 3.4rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            text-shadow: 0 8px 25px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 16px 45px;
+            background: #ffffff;
+            color: #f107a3;
+            font-weight: 800;
+            border-radius: 60px;
+            text-decoration: none;
+            transition: 0.3s ease;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+        }
+
+        .btn:hover {
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+        }
+
+        section {
+            padding: 90px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
+            margin-top: 60px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.18);
+            padding: 40px;
+            border-radius: 30px;
+            backdrop-filter: blur(14px);
+            transition: 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.03);
+            background: rgba(255, 255, 255, 0.28);
+        }
+
+        .card h3 {
+            margin-bottom: 18px;
+            font-size: 1.7rem;
+        }
+
+        .about p {
+            max-width: 850px;
+            margin: 30px auto 0;
+            line-height: 1.8;
+            font-size: 1.15rem;
+        }
+
+        .prices {
+            background: rgba(255,255,255,0.15);
+            border-radius: 40px;
+            padding: 70px 20px;
+        }
+
+        .price-box {
+            margin-top: 40px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+
+        .contact {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 80px 20px;
+            border-radius: 40px 40px 0 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0,0,0,0.6);
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.4rem;
+            }
+            .subtitle {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Английский без скуки и зубрёжки</h1>
+    <div class="subtitle">Преподаю язык так, как на нем говорят в жизни.</div>
+    <p>English Level — школа английского языка</p>
+    <p>Гульназ Аслямова — репетитор с опытом 20 лет</p>
+    <a href="#contact" class="btn">Записаться на пробный урок</a>
+</header>
+
+<section class="about">
+    <div class="container">
+        <h2>О школе English Level</h2>
+        <p>
+            Меня зовут Гульназ Аслямова. Уже 20 лет я обучаю английскому языку младших школьников. На уроках мы не зубрим правила, а учимся говорить, понимать и использовать язык в реальных жизненных ситуациях. Дети занимаются в яркой, дружелюбной атмосфере и быстро начинают уверенно общаться на английском.
+        </p>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>Почему выбирают мои занятия</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Живой разговорный английский</h3>
+                <p>Учимся говорить так, как говорят носители языка в повседневной жизни.</p>
+            </div>
+            <div class="card">
+                <h3>Опыт 20 лет</h3>
+                <p>Глубокое понимание детской психологии и эффективные методики обучения.</p>
+            </div>
+            <div class="card">
+                <h3>Формат для младших школьников</h3>
+                <p>Интерактивные задания, игры и современные материалы без скуки.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="prices">
+    <div class="container">
+        <h2>Стоимость занятий</h2>
+        <div class="price-box">
+            <p>Индивидуальный урок — 800 рублей / 60 минут</p>
+            <p>Занятие в группе — 500 рублей</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Контакты</h2>
+        <p>Телефон: 8 904 450 44 51</p>
+        <p>Школа английского языка English Level</p>
+        <a href="tel:89044504451" class="btn">Позвонить сейчас</a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 English Level | Гульназ Аслямова</p>
+</footer>
+
+</body>
+</html>
